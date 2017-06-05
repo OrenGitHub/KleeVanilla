@@ -1,0 +1,16 @@
+git clone --depth 1 --branch v1.3.0 https://github.com/klee/klee.git
+rm -rf klee/.git
+
+cd klee
+./configure \
+LDFLAGS="-L/home/oren/GIT/KleeVanilla/minisat/build/release/lib/"  \
+--with-llvm=/home/oren/GIT/KleeVanilla/llvm/                       \
+--with-llvmcc=/home/oren/GIT/KleeVanilla/llvm/Release/bin/clang    \
+--with-llvmcxx=/home/oren/GIT/KleeVanilla/llvm/Release/bin/clang++ \
+--with-stp=/home/oren/GIT/KleeVanilla/stp/build/                   \
+--with-uclibc=/home/oren/GIT/KleeVanilla/klee-uclibc               \
+--with-z3=/home/oren/GIT/KleeVanilla/z3/build/                     \
+--enable-posix-runtime
+
+make -j `nproc` ENABLE_OPTIMIZED=1
+

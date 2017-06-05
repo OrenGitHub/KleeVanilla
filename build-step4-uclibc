@@ -1,0 +1,10 @@
+git clone --depth 1 --branch klee_uclibc_v1.0.0 https://github.com/klee/klee-uclibc.git
+rm -rf klee-uclibc/.git
+
+cd klee-uclibc
+./configure \
+ --make-llvm-lib \
+ --with-llvm-config="../llvm/Release/bin/llvm-config" \
+ --with-cc="../llvm/Release/bin/clang"
+make -j `nproc`
+cd ..

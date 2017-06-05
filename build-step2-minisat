@@ -1,0 +1,7 @@
+git clone --depth 1 https://github.com/stp/minisat.git
+# Commit ID: 37dc6c67e2af26379d88ce349eb9c4c6160e8543 (more than 2 years old)
+rm -rf minisat/.git
+
+cd minisat
+make
+cd ..

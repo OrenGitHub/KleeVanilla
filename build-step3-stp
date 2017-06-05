@@ -1,0 +1,15 @@
+git clone --depth 1 --branch 2.1.2 https://github.com/stp/stp.git
+rm -rf stp/.git
+
+cd stp
+mkdir build
+cd build
+cmake \
+ -DBUILD_SHARED_LIBS:BOOL=OFF \
+ -DENABLE_PYTHON_INTERFACE:BOOL=OFF \
+ -DMINISAT_INCLUDE_DIR="../../minisat/" \
+ -DMINISAT_LIBRARY="../../minisat/build/release/lib/libminisat.a" \
+ -DCMAKE_BUILD_TYPE="Release" \
+ -DTUNE_NATIVE:BOOL=ON ..
+make -j `nproc`
+cd ../..
