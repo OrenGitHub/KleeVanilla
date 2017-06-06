@@ -17,4 +17,4 @@ input.instnamer.bc
 # IGNORE KLEE OUTPUT FILES #
 ############################
 **/klee-out-*
-**/klee-last/*
+**/klee-last*
