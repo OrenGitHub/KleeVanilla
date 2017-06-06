@@ -16,5 +16,5 @@
 ############################
 # IGNORE KLEE OUTPUT FILES #
 ############################
-./klee-out-*
-./klee-last/*
+**/klee-out-*
+**/klee-last/*
