@@ -1,0 +1,20 @@
+#################################
+# IGNORE CODE OF BUILT PACKAGES #
+#################################
+**/llvm/*
+**/minisat/*
+**/stp/*
+**/klee-uclibc/*
+**/z3/*
+**/klee/*
+#################################
+# IGNORE INTERMEDIATE FILES TOO #
+#################################
+./input.bc
+./input.ll
+./input.instnamer.bc
+############################
+# IGNORE KLEE OUTPUT FILES #
+############################
+./klee-out-*
+./klee-last/*

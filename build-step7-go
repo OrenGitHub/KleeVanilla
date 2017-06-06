@@ -1,0 +1,5 @@
+./llvm/Release/bin/clang -flto -c -o input.bc input.c
+./llvm/Release/bin/opt -instnamer -o input.instnamer.bc input.bc
+#gdb -x gdbCommands.txt --args ./klee/Release+Asserts/bin/klee                                -solver-backend=stp -output-module -output-source -use-query-log=all:smt2,solver:smt2 ./input.instnamer.bc 
+                               ./klee/Release+Asserts/bin/klee  --libc=uclibc --posix-runtime -solver-backend=z3  -output-module -output-source -use-query-log=all:smt2,solver:smt2 ./input.instnamer.bc
+./llvm/Release/bin/llvm-dis -o=input.ll ./klee-last/final.bc
