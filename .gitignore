@@ -10,9 +10,9 @@
 #################################
 # IGNORE INTERMEDIATE FILES TOO #
 #################################
-./input.bc
-./input.ll
-./input.instnamer.bc
+input.bc
+input.ll
+input.instnamer.bc
 ############################
 # IGNORE KLEE OUTPUT FILES #
 ############################
