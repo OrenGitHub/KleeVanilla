@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "/home/oren/GIT/MyKlee/klee/include/klee/klee.h"
+#include "/home/oren/GIT/KleeVanilla/klee/include/klee/klee.h"
 
 #define N 16
 
